@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Database</title>
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+<body>
+  <h1>Music Database</h1>
+  <form action="/addSong" method="POST">
+    <label>Song Name:</label>
+    <input type="text" name="Songname" required><br>
+    <label>Film:</label>
+    <input type="text" name="Film" required><br>
+    <label>Music Director:</label>
+    <input type="text" name="Music_director" required><br>
+    <label>Singer:</label>
+    <input type="text" name="singer" required><br>
+    <input type="submit" value="Add Song">
+  </form>
+
+  <h2>List of Songs:</h2>
+  <% if(music!=null) { %>
+  <table>
+    <tr>
+      <th>Song Name</th>
+      <th>Film</th>
+      <th>Music Director</th>
+      <th>Singer</th>
+      <th>Action</th>
+    </tr>
+    <% music.forEach(function(song) { %>
+      <tr>
+        <td><%= song.Songname %></td>
+        <td><%= song.Film %></td>
+        <td><%= song.Music_director %></td>
+        <td><%= song.singer %></td>
+        <td>
+          <form action="/deleteSong/<%= song._id %>" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+  <% } %>
+</body>
+</html>
