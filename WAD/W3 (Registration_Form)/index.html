@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration form</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <script src="./assets//bootstrap//js/bootstrap.min.js"></script>
+    <style>
+      .custom-container {
+        border: 4px solid #e4e2e2; 
+        border-radius: 50px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex flex-column justify-content-center mt-5 custom-container  w-50">
+      <h1 class="text-center mb-4">Registration Form</h1>
+      <form id="form" class="form row g-3">
+        <div class="col-md-6">
+          <label for="fname" class="form-label">Name</label>
+          <input placeholder="Name" type="text" class="form-control" id="fname" />
+        </div>
+        <div class="col-md-6">
+          <label for="femail" class="form-label">Email</label>
+          <input placeholder="Email" type="email" class="form-control" id="femail" />
+        </div>
+        <div class="col-md-6">
+          <label for="fpass" class="form-label">Password</label>
+          <input placeholder="Password" type="password" class="form-control" id="fpass" />
+        </div>
+        <div class="col-md-6">
+          <label for="fcpass" class="form-label">Confirm Password</label>
+          <input placeholder="Confirm Password" type="password" class="form-control" id="fcpass" />
+        </div>
+        <div class="col-md-12">
+          <label for="fadd" class="form-label">Address</label>
+          <input placeholder="Confirm Password" type="text" class="form-control" id="fadd" />
+        </div>
+        <div class="col-md-4">
+          <label for="fcity" class="form-label">City</label>
+          <input placeholder="City" type="text" class="form-control" id="fcity" />
+        </div>
+        <div class="col-md-4">
+          <label for="fdis" class="form-label">District</label>
+          <input placeholder="District" type="text" class="form-control" id="fdis" />
+        </div>
+        <div class="col-md-4">
+          <label for="fstate" class="form-label">State</label>
+          <input placeholder="State" type="text" class="form-control" id="fstate" />
+        </div>
+        <div class="col-md-6">
+          <label for="fcnt" class="form-label">Country</label>
+          <select class="form-select" id="fcnt">
+            <option selected>India</option>
+            <option>Australia</option>
+            <option>Canada</option>
+            <option>England</option>
+            <option>Spain</option>
+            <option>Japan</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="fpin" class="form-label">Pincode</label>
+          <input class="form-control" id="fpin" placeholder="Pincode" type="text" />
+        </div>
+        <div class="col-md-12 text-center mt-5">
+          <button  type="submit" class="text-center mb-4 btn btn-dark w-100">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
