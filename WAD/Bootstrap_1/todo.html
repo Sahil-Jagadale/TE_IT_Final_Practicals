@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TODO</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+      .close-btn{
+        padding: 5px 10px;
+        background-color: rgb(238,1,1);
+        color: white;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a href="#" class="navbar-brand">Brand</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse ms-auto">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Messages <span class="badge ng-success">12</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Dashboard:</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>team</th>
+            <th>All star</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="r1">
+            <td>sahil</td>
+            <td>RCB</td>
+            <td>Yes</td>
+            <td><span class="close-btn">X</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <h1>Todos:</h1>
+      <div class="alert alert-success">Feel good about bootstrap</div>
+      <div class="alert alert-primary">Feel good about bootstrap</div>
+      <div class="alert alert-warning">Feel good about bootstrap</div>
+      <div class="alert alert-warning">Feel good about bootstrap</div>
+      <div class="alert alert-danger">Feel good about bootstrap</div>
+      <div class="alert alert-danger">Feel good about bootstrap</div>
+    </div>
+  </body>
+</html>
