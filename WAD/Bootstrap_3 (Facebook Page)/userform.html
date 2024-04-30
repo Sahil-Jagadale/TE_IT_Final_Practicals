@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Form</title>
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+  <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container mt-3 p-2 w-50 border border-4">
+    <div class="w-100 border" style="background-color: rgb(252, 252, 206);">
+      <h1 class="text-center" style="color: rgb(225, 29, 15); font-family: Playfair Display, serif; font-style: bold; font-weight: bolder;">User Form</h1>
+    </div>
+      <div class="container">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>
+                <div class=" w-100 p-3 border" style="background-color: rgb(115, 227, 250);;">
+                    <h5 class="text-center">Enter Name</h5>
+                </div>
+              </td>
+              <td>
+                  <div class="p-1 border text-center" style="background-color: rgb(115, 227, 250);;">
+                      <input class=" ml-2 mt-2 mb-2  form-control w-100 text-center align-items-center" type="text">
+                  </div>
+              </td>
+            </tr>
+            <tr class="w-100">
+              <td>
+                <div class=" w-100 p-3 border" style="background-color: rgb(115, 227, 250);;">
+                    <h5 class="text-center">Enter Password</h5>
+                </div>
+              </td>
+              <td>
+                  <div class="p-1 border text-center" style="background-color: rgb(115, 227, 250);;">
+                      <input class=" ml-2 mt-2 mb-2  form-control w-100 text-center align-items-center" type="password">
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class=" w-100 p-5 border" style="background-color: rgb(115, 227, 250);">
+                    <h5 class="text-center">Address</h5>
+                </div>
+              </td>
+              <td>
+                  <div class="p-4 border text-center" style="background-color: rgb(115, 227, 250);;">
+                      <textarea class=" ml-2 mt-2 mb-2  form-control w-100 text-center align-items-center" type="text"></textarea>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class=" w-100 p-5 border" style="background-color: rgb(115, 227, 250);;">
+                    <h5 class="text-center">Select Game</h5>
+                </div>
+              </td>
+              <td>
+                  <div class="p-1 border " style="background-color: rgb(115, 227, 250);;">
+                    <div class="text-left">
+                      <input class="d-inline" type="checkbox">
+                      <p class="d-inline">Hockey</p>
+                    </div>
+                    <div class="text-left">
+                      <input class="d-inline" type="checkbox">
+                      <p class="d-inline">Football</p>
+                    </div>
+                    <div class="text-left">
+                      <input class="d-inline" type="checkbox">
+                      <p class="d-inline">Badminton</p>
+                    </div>
+                    <div class="text-left">
+                      <input class="d-inline" type="checkbox">
+                      <p class="d-inline">Cricket</p>
+                    </div>
+                    <div class="text-left">
+                      <input class="d-inline" type="checkbox">
+                      <p class="d-inline">Volleyball</p>
+                    </div>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class=" w-100 p-5 border" style="background-color: rgb(115, 227, 250);;">
+                  <h5 class="text-center">Gender</h5>
+                </div>
+              </td>
+              <td>
+                <div class=" w-100 p-5 border" style="background-color: rgb(115, 227, 250);;">
+                  <div class="form-check form-check-inline">
+                    <input class="form-radio-input" type="radio" id="inlineCheckbox1">
+                    <label class="form-radio-label" for="inlineCheckbox1">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-radio-input" type="radio" id="inlineCheckbox2" value="option2">
+                    <label class="form-radio-label" for="inlineCheckbox2">Female</label>
+                  </div>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class=" w-100 p-2 border" style="background-color: rgb(115, 227, 250);;">
+                    <h5 class="text-center">Select your age</h5>
+                </div>
+              </td>
+              <td>
+                  <div class="p-1 border text-center" style="background-color: rgb(115, 227, 250);;">
+                    <div class="dropdown">
+                      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">Action</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                      </div>
+                    </div>
+                  </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mb-2 p-3 w-100 text-center" style="background-color: rgb(115, 227, 250);;">
+          <input type="file">
+        </div>
+        <div class="p-2 w-100 text-center justify-content-center" style="background-color: rgb(115, 227, 250);;">
+          <button class="w-25 btn btn-light d-inline ">Click</button>
+          <button class="w-25 btn btn-light d-inline">Reset</button>
+          <button class="w-25 btn btn-light d-inline ">Submit form</button>
+        </div>
+      </div>
+    </div>
+    </body>
+    </html>
