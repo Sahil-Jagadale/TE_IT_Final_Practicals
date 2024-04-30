@@ -6,6 +6,9 @@ const SongsSchema = mongoose.Schema(
     Film: String,
     Music_director: String,
     singer: String,
+    actor: String,
+    actress: String,
+    favorite: Boolean,
   },
   {
     timestamps: true,

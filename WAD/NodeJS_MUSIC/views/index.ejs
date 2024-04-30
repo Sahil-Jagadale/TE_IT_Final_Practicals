@@ -26,7 +26,12 @@
       <th>Film</th>
       <th>Music Director</th>
       <th>Singer</th>
+      <th>Actor</th>
+      <th>Actress</th>
       <th>Action</th>
+      <th>Add favorite</th>
+      <th>Update</th>
+      
     </tr>
     <% music.forEach(function(song) { %>
       <tr>
@@ -34,9 +39,25 @@
         <td><%= song.Film %></td>
         <td><%= song.Music_director %></td>
         <td><%= song.singer %></td>
+        <td><%= song.actor %></td>
+        <td><%= song.actress %></td>
         <td>
           <form action="/deleteSong/<%= song._id %>" method="POST">
             <button type="submit">Delete</button>
+          </form>
+        </td>
+        <td>
+          <form action="/markFavorite/<%= song._id %>" method="POST">
+            <button type="submit">Mark as Favorite</button>
+          </form>
+        </td>
+        <td>
+          <form action="/updateSong/<%= song._id %>" method="POST">
+            <label for="actor">Actor:</label>
+            <input type="text" name="actor" required><br>
+            <label for="actress">Actress:</label>
+            <input type="text" name="actress" required><br>
+            <button type="submit">Update</button>
           </form>
         </td>
       </tr>

@@ -92,17 +92,32 @@ app.post("/deleteSong/:id", async (req, res) => {
 });
 
 // Add favorite song
-app.post("/addFavoriteSong", async (req, res) => {
-    const song = new Songs(req.body);
-    song.
-      save()
-      .then((item) => {
-        res.redirect("/index");
-      })
-      .catch ((error) => {
-        res.json({ message: "err" });
-      });
+app.post("/markFavorite/:id", async (req, res) => {
+    const song = await Songs.findById(req.params.id);
+    if (!song) {
+      return res.status(404).send("Song not found");
+    }
+    song.favorite = true;
+    await song.
+    save()
+    .then((item) => {
+      res.redirect("/listFavoriteSongs");
+    })
+    .catch ((error) => {
+      res.status(500).json({ message: "Error marking song as favorite" });
+    });
 });
+
+app.get("/listFavoriteSongs", async (req, res) => {
+  Songs.find({ favorite: true })
+  .then((favoriteSongs) => {
+    res.render("favoriteSongs", { favoriteSongs: favoriteSongs });
+  })
+  .catch ((error) => {
+    res.status(500).json({ message: "Error retrieving favorite songs" });
+  });
+});
+
 
 // List songs by Singer from specified Film
 app.get("/songsBySingerAndFilm/:singer/:film", async (req, res) => {
@@ -120,16 +135,19 @@ app.get("/songsBySingerAndFilm/:singer/:film", async (req, res) => {
 
 // Update song by ID to add Actor and Actress name
 app.post("/updateSong/:id", async (req, res) => {
-    const song = await Songs.findById(req.params.id);
-    song.Actor = req.body.Actor;
-    song.Actress = req.body.Actress;
-    await song
-      .save()
-      .then((music)=>{
-        res.redirect("/index");
-      })
+      const song = await Songs.findById(req.params.id);
+      if (!song) {
+          return res.status(404).send("Song not found");
+      }
+      song.actor = req.body.actor;
+      song.actress = req.body.actress;
+      await song.
+      save()
+      .then((item) => {
+        res.redirect("/listSongs");
+      }) 
       .catch ((error) => {
-        res.json({ message: "err" });
+        res.status(500).json({ message: "Error updating song" });
       });
 });
 
