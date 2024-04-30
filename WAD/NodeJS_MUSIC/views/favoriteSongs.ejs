@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favorite Songs</title>
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+<body>
+  <h1>Favorite Songs</h1>
+  <% if(favoriteSongs && favoriteSongs.length > 0) { %>
+  <table>
+    <tr>
+      <th>Song Name</th>
+      <th>Film</th>
+      <th>Music Director</th>
+      <th>Singer</th>
+    </tr>
+    <% favoriteSongs.forEach(function(song) { %>
+      <tr>
+        <td><%= song.Songname %></td>
+        <td><%= song.Film %></td>
+        <td><%= song.Music_director %></td>
+        <td><%= song.singer %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <% } else { %>
+  <p>No favorite songs found.</p>
+  <% } %>
+</body>
+</html>
