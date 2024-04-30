@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Facebook.com</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        header {
+            background: #001a6e;
+            color: white;
+        }
+        input {
+          border-radius: 100%;
+        }
+    </style>
+</head>
+
+<body>
+  <header class="text-white py-4">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <h1 class="col-md-4">facebook</h1>
+        <div class="col-md-8">
+          <form class="form">
+            <div class="row mt-3">
+              <div class="col-md-4">
+                <label for="email" class="form-label">Email or Username</label>
+                <input id="email" class="form-control" type="email" placeholder="Email">
+                <div class="row flex">
+                  <div class="col-auto">
+                    <input type="checkbox">
+                  </div>
+                  <div class="col">
+                    <p class="mb-0">Keep me logged in</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="pass" class="form-label">Password</label>
+                <input id="pass" class="form-control" type="password" placeholder="Password">
+                <div class="row flex">
+                  <p>Forgotten my password</p>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <button class="btn btn-light" type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card" style="border: none;">
+          <div class="card-body">
+            <h2 class="card-text">Faceook is useless without friends.</h2>
+            <h2 class="card-text">Make More Friends.</h2>
+          </div>
+          <img src="data:image/jpeg;base64,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" class="card-img-bottom" alt="...">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-2">
+          <h1>Create an Account</h1>
+          <p>It's free and always will be.</p>
+        </div>
+        <form class="form">
+          <div class="row input-group-prepend">
+            <div class="col-md-6">
+              <input class="form-control" type="text" placeholder="Firstname">
+            </div>
+            <div class="col-md-6">
+              <input class="form-control" type="text" placeholder="Lastname">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <input class="form-control" type="email" placeholder="Email">
+          </div>
+          <div class="col-md-12">
+            <input class="form-control" type="email" placeholder="Re-enter email">
+          </div>
+          <div class="col-md-12">
+            <input class="form-control" type="password" placeholder="Password">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="date" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-1">
+                      <input type="radio">
+                    </div>
+                    <div class="col-md-2">
+                      <p class="">Male</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-1">
+                      <input type="radio">
+                    </div>
+                    <div class="col-md-2">
+                      <p>Female</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p>By clicking create an account, you agree to our Terms</p>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-success">Signup</button>
+          </div>
+          <div class="col-md-12 mt-2">
+            <p>Create a page for you</p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
