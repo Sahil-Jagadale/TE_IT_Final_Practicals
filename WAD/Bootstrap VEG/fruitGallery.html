@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Online Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Offline Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
+    <script src="./js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Bootstrap grid</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- sidebar content -->
+        <div class="row mt-5">
+          <div class="col-md-3 position-sticky">
+            <h3>Contents</h3>
+            <div class="list-group mt-2">
+              <a href="index.html" class="list-group-item list-group-item-action"
+                >Home</a
+              >
+              <a href="#" class="list-group-item list-group-item-action active"
+                >Fruit Gallery</a
+              >
+              <a href="fruitsandbenifits.html" class="list-group-item list-group-item-action"
+                >Health Benifits</a
+              >
+              <a href="interestingFacts.html" class="list-group-item list-group-item-action"
+                >Interesting facts</a
+              >
+            </div>
+            <div class="form-group">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Search..."
+                class="form-control mt-2 mb-2"
+              />
+              <button class="btn btn-primary form-control">Search</button>
+            </div>
+
+            <div class="links">
+              <h5>Important Links</h5>
+              <a href="https://google.com/?search=medical&benifits&of&fruits">Explore medical benefits</a>
+              <a href="https://google.com/?search=fruit&farming">Fruit farming</a>
+              <a href="https://google.com/?search=purchase&fruits">Cleaning fruits</a>
+              <a href="https://google.com/?search=storing&fruits">Storing fruits</a>
+            </div>
+          </div>
+
+          <!-- main containt -->
+          <div class="col-md-9">
+            <div class="container">
+              <h3 class="mb-4">Fruit Gallery</h3>
+              <div class="container">
+                <div class="row flex">
+                  <div class="col-md-4 p-2">
+                    <div class="card p-0">
+                      <img
+                        src="img/bananana.jpg"
+                        class="card-img-top card-img-custom"
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="card-title h4">Banana</p>
+                        <p class="card-text">
+                          Something intersting fact about bananana
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 p-2">
+                    <div class="card p-0">
+                      <img
+                        src="img/grapes.jpg"
+                        class="card-img-top card-img-custom"
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="card-title h4">Grapes</p>
+                        <p class="card-text">
+                          Something intersting fact about Grapes
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 p-2">
+                    <div class="card p-0">
+                      <img
+                        src="img/strawberry.jpg"
+                        class="card-img-top card-img-custom"
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="card-title h4">Strawberry</p>
+                        <p class="card-text">
+                          Something intersting fact about Strawberry
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row flex">
+                  <div class="col-md-4 p-2">
+                    <div class="card p-0">
+                      <img
+                        src="img/bananana.jpg"
+                        class="card-img-top card-img-custom"
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="card-title h4">Banana</p>
+                        <p class="card-text">
+                          Something intersting fact about bananana
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 p-2">
+                    <div class="card p-0">
+                      <img
+                        src="img/grapes.jpg"
+                        class="card-img-top card-img-custom"
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="card-title h4">Grapes</p>
+                        <p class="card-text">
+                          Something intersting fact about Grapes
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 p-2">
+                    <div class="card p-0">
+                      <img
+                        src="img/strawberry.jpg"
+                        class="card-img-top card-img-custom"
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="card-title h4">Strawberry</p>
+                        <p class="card-text">
+                          Something intersting fact about Strawberry
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row flex">
+                  <div class="col-md-4 p-2">
+                    <div class="card p-0">
+                      <img
+                        src="img/bananana.jpg"
+                        class="card-img-top card-img-custom"
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="card-title h4">Banana</p>
+                        <p class="card-text">
+                          Something intersting fact about bananana
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 p-2">
+                    <div class="card p-0">
+                      <img
+                        src="img/grapes.jpg"
+                        class="card-img-top card-img-custom"
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="card-title h4">Grapes</p>
+                        <p class="card-text">
+                          Something intersting fact about Grapes
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 p-2">
+                    <div class="card p-0">
+                      <img
+                        src="img/strawberry.jpg"
+                        class="card-img-top card-img-custom"
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="card-title h4">Strawberry</p>
+                        <p class="card-text">
+                          Something intersting fact about Strawberry
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
