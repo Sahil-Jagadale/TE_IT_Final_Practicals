@@ -24,6 +24,7 @@ app.use("/css", express.static(path.resolve(__dirname, "static/css")));
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 app.post("/addmarks", (req, res) => {
   var myData = new Student(req.body);
   myData
@@ -94,5 +95,5 @@ app.post("/updateBy10/:id", async (req,res) => {
 })
 
 app.listen(5000, () => {
-  console.log("Server is listening on port 3000");
+  console.log("Server is listening on port 5000");
 });

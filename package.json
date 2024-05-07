@@ -1,0 +1,19 @@
+{
+  "name": "saveour",
+  "version": "1.0.0",
+  "description": "It is just for saving you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sahil-Jagadale/TE_IT_Final_Practicals.git"
+  },
+  "author": "sahil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sahil-Jagadale/TE_IT_Final_Practicals/issues"
+  },
+  "homepage": "https://github.com/Sahil-Jagadale/TE_IT_Final_Practicals#readme"
+}
