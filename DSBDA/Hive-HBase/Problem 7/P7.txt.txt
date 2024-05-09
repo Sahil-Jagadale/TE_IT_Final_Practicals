@@ -1,0 +1,316 @@
+Write an application using HBase and HiveQL for Customer information system which will 
+include
+a. Creation of –Cutomer_info(Cust-ID,Cust-Name,orderID), 
+order_info(OrderID,ItemID,Quantity), item_info(Item-ID,Item-Name,ItemPrice) 
+tables in Hive
+b. Load table with data from local storage in Hive.
+c. Perform Join tables with Hive
+d. Create Index on Customer information system in Hive.
+e. Find the total, average sales in Hive
+f. Find Order details with maximum cost.
+g. Creating an external Hive table to connect to the HBase for Customer Information 
+System.
+h. Display records of Customer Information Table in Hbase.
+
+
+[cloudera@quickstart ~]$ hive
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+WARNING: Hive CLI is deprecated and migration to Beeline is recommended.
+hive> drop table customer_info
+    > ;
+OK
+Time taken: 4.864 seconds
+hive> create table customer_info (
+    > cust_id int,
+    > cust_name string,
+    > orderID int)
+    > ROW FORMAT DELIMITED
+    > FIELDS TERMINATED BY ','
+    > STORED AS TEXTFILE;
+OK
+Time taken: 2.168 seconds
+hive> create table order_info (
+    > orderID int,
+    > itemID int,
+    > Quantity int)
+    > ROW FORMAT DELIMITED
+    > FIELDS TERMINATED BY ','
+    > STORED AS TEXTFILE;
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. AlreadyExistsException(message:Table order_info already exists)
+hive> drop table order_info
+    > ;
+OK
+Time taken: 0.425 seconds
+hive> create table order_info (
+    > orderID int,
+    > itemID int,
+    > Quantity int)
+    > ROW FORMAT DELIMITED
+    > FIELDS TERMINATED BY ','
+    > STORED AS TEXTFILE;
+OK
+Time taken: 0.751 seconds
+hive> drop table item_info
+    > ;
+OK
+Time taken: 0.643 seconds
+hive> create table item_info (
+    > itemID int,
+    > item_name string,
+    > item_price double)
+    > ROW FORMAT DELIMITED
+    > FIELDS TERMINATED BY ','
+    > STORED AS TEXTFILE;
+OK
+Time taken: 0.421 seconds
+hive> LOAD DATA LOCAL INPATH '/home/cloudera/customer_info.csv' INTO TABLE customer_info;
+Loading data to table default.customer_info
+Table default.customer_info stats: [numFiles=1, totalSize=195]
+OK
+Time taken: 48.102 seconds
+hive> LOAD DATA LOCAL INPATH '/home/cloudera/order_info.csv' INTO TABLE order_info;
+Loading data to table default.order_info
+Table default.order_info stats: [numFiles=1, totalSize=80]
+OK
+Time taken: 7.431 seconds
+hive> LOAD DATA LOCAL INPATH '/home/cloudera/item_info.csv' INTO TABLE item_info;
+Loading data to table default.item_info
+Table default.item_info stats: [numFiles=1, totalSize=129]
+OK
+Time taken: 4.52 seconds
+hive> SELECT * FROM customer_info
+    > JOIN order_info ON customer_info.orderID = order_info.orderID
+    > JOIN item_info ON order_info.itemID = item_info.itemID;
+Query ID = cloudera_20240509065656_7fb4509f-597c-42b4-8998-e7e7cfda001e
+Total jobs = 1
+Execution log at: /tmp/cloudera/cloudera_20240509065656_7fb4509f-597c-42b4-8998-e7e7cfda001e.log
+2024-05-09 06:57:36	Starting to launch local task to process map join;	maximum memory = 932184064
+2024-05-09 06:58:22	Dump the side-table for tag: 1 with group count: 10 into file: file:/tmp/cloudera/964569cf-33aa-47ef-ab0b-079c4d72762c/hive_2024-05-09_06-56-43_143_2205997784890346290-1/-local-10005/HashTable-Stage-5/MapJoin-mapfile01--.hashtable
+2024-05-09 06:58:24	Uploaded 1 File to: file:/tmp/cloudera/964569cf-33aa-47ef-ab0b-079c4d72762c/hive_2024-05-09_06-56-43_143_2205997784890346290-1/-local-10005/HashTable-Stage-5/MapJoin-mapfile01--.hashtable (593 bytes)
+2024-05-09 06:58:24	Dump the side-table for tag: 1 with group count: 10 into file: file:/tmp/cloudera/964569cf-33aa-47ef-ab0b-079c4d72762c/hive_2024-05-09_06-56-43_143_2205997784890346290-1/-local-10005/HashTable-Stage-5/MapJoin-mapfile11--.hashtable
+2024-05-09 06:58:24	Uploaded 1 File to: file:/tmp/cloudera/964569cf-33aa-47ef-ab0b-079c4d72762c/hive_2024-05-09_06-56-43_143_2205997784890346290-1/-local-10005/HashTable-Stage-5/MapJoin-mapfile11--.hashtable (469 bytes)
+2024-05-09 06:58:24	End of local task; Time Taken: 47.523 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1715251881039_0003, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1715251881039_0003/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1715251881039_0003
+Hadoop job information for Stage-5: number of mappers: 1; number of reducers: 0
+2024-05-09 07:00:04,014 Stage-5 map = 0%,  reduce = 0%
+2024-05-09 07:01:04,224 Stage-5 map = 0%,  reduce = 0%
+2024-05-09 07:02:07,531 Stage-5 map = 0%,  reduce = 0%
+2024-05-09 07:03:10,535 Stage-5 map = 0%,  reduce = 0%
+2024-05-09 07:04:13,840 Stage-5 map = 0%,  reduce = 0%
+2024-05-09 07:05:15,177 Stage-5 map = 0%,  reduce = 0%, Cumulative CPU 7.47 sec
+2024-05-09 07:05:39,384 Stage-5 map = 100%,  reduce = 0%, Cumulative CPU 22.56 sec
+MapReduce Total cumulative CPU time: 22 seconds 560 msec
+Ended Job = job_1715251881039_0003
+MapReduce Jobs Launched: 
+Stage-Stage-5: Map: 1   Cumulative CPU: 22.56 sec   HDFS Read: 8972 HDFS Write: 378 SUCCESS
+Total MapReduce CPU Time Spent: 22 seconds 560 msec
+OK
+1	John Doe	101	101	1	2	1	Shirt	2099.0
+2	Jane Smith	102	102	2	3	2	Pants	2999.0
+3	Michael Johnson	103	103	3	1	3	Shoes	3999.0
+4	Emily Brown	104	104	1	5	1	Shirt	2099.0
+5	Christopher Lee	105	105	2	2	2	Pants	2999.0
+6	Sarah Wilson	106	106	3	4	3	Shoes	3999.0
+7	David Taylor	107	107	1	3	1	Shirt	2099.0
+8	Amanda Clark	108	108	2	1	2	Pants	2999.0
+9	Matthew White	109	109	3	2	3	Shoes	3999.0
+Time taken: 542.036 seconds, Fetched: 9 row(s)
+hive> create index cust_index on table cust_info(cust_name) as 'compact' with deferred rebuild;
+OK
+Time taken: 4.1 seconds
+hive> show index on customer_info;
+OK
+Time taken: 0.442 seconds
+hive> create index cust_index on table cust_info (cust_name) as 'org.apche.hadoop.hive.ql.index.compact.CompactIndexHandler' with deferred rebuild;
+FAILED: SemanticException class name provided for index handler not found.
+hive> create index cust_index on table customer_info(cust_name) as 'compact' with deferred rebuild;
+OK
+Time taken: 1.421 seconds
+hive> show index on customer_info;
+OK
+cust_index          	customer_info       	cust_name           	default__customer_info_cust_index__	compact             	
+Time taken: 0.405 seconds, Fetched: 1 row(s)
+hive> select sum(item_price * Quantity) as total_sales, avg(item_price * Quantity) as avg_sales from order_info
+    > join item_info on order_info.itemID = item_info.itemID;
+Query ID = cloudera_20240509072020_e8f20206-1350-4f20-9272-ef00a1a7b5a0
+Total jobs = 1
+Execution log at: /tmp/cloudera/cloudera_20240509072020_e8f20206-1350-4f20-9272-ef00a1a7b5a0.log
+2024-05-09 07:20:55	Starting to launch local task to process map join;	maximum memory = 932184064
+2024-05-09 07:21:01	Dump the side-table for tag: 0 with group count: 4 into file: file:/tmp/cloudera/964569cf-33aa-47ef-ab0b-079c4d72762c/hive_2024-05-09_07-20-16_414_5549940290471613809-1/-local-10004/HashTable-Stage-2/MapJoin-mapfile20--.hashtable
+2024-05-09 07:21:01	Uploaded 1 File to: file:/tmp/cloudera/964569cf-33aa-47ef-ab0b-079c4d72762c/hive_2024-05-09_07-20-16_414_5549940290471613809-1/-local-10004/HashTable-Stage-2/MapJoin-mapfile20--.hashtable (375 bytes)
+2024-05-09 07:21:01	End of local task; Time Taken: 6.166 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1715251881039_0004, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1715251881039_0004/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1715251881039_0004
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
+2024-05-09 07:21:33,666 Stage-2 map = 0%,  reduce = 0%
+2024-05-09 07:22:34,536 Stage-2 map = 0%,  reduce = 0%
+2024-05-09 07:23:32,285 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 19.96 sec
+2024-05-09 07:23:51,386 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 22.32 sec
+MapReduce Total cumulative CPU time: 22 seconds 320 msec
+Ended Job = job_1715251881039_0004
+MapReduce Jobs Launched: 
+Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 22.32 sec   HDFS Read: 13657 HDFS Write: 26 SUCCESS
+Total MapReduce CPU Time Spent: 22 seconds 320 msec
+OK
+66977.0	7441.888888888889
+Time taken: 217.307 seconds, Fetched: 1 row(s)
+hive> select order_info.orderID, SUM(item_info.item_price * order_info.Quantity) as totalcost
+    > FROM order_info
+    > JOIN item_info on order_info.itemID = item_info.itemID
+    > GROUP BY order_info.orderID
+    > ORDER BY totalcost DESC
+    > LIMIT 1;
+Query ID = cloudera_20240509073232_26aec0fa-1ca4-4d21-8efc-4cce9b9fbbe2
+Total jobs = 2
+Execution log at: /tmp/cloudera/cloudera_20240509073232_26aec0fa-1ca4-4d21-8efc-4cce9b9fbbe2.log
+2024-05-09 07:32:14	Starting to launch local task to process map join;	maximum memory = 932184064
+2024-05-09 07:32:16	Dump the side-table for tag: 0 with group count: 4 into file: file:/tmp/cloudera/964569cf-33aa-47ef-ab0b-079c4d72762c/hive_2024-05-09_07-32-07_371_7062288953625515637-1/-local-10005/HashTable-Stage-2/MapJoin-mapfile30--.hashtable
+2024-05-09 07:32:16	Uploaded 1 File to: file:/tmp/cloudera/964569cf-33aa-47ef-ab0b-079c4d72762c/hive_2024-05-09_07-32-07_371_7062288953625515637-1/-local-10005/HashTable-Stage-2/MapJoin-mapfile30--.hashtable (385 bytes)
+2024-05-09 07:32:16	End of local task; Time Taken: 1.751 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1715251881039_0005, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1715251881039_0005/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1715251881039_0005
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
+2024-05-09 07:32:28,103 Stage-2 map = 0%,  reduce = 0%
+2024-05-09 07:33:11,669 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 6.76 sec
+2024-05-09 07:33:25,687 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 8.87 sec
+MapReduce Total cumulative CPU time: 8 seconds 870 msec
+Ended Job = job_1715251881039_0005
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1715251881039_0006, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1715251881039_0006/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1715251881039_0006
+Hadoop job information for Stage-3: number of mappers: 1; number of reducers: 1
+2024-05-09 07:33:46,042 Stage-3 map = 0%,  reduce = 0%
+2024-05-09 07:34:24,344 Stage-3 map = 100%,  reduce = 0%, Cumulative CPU 7.62 sec
+2024-05-09 07:34:40,697 Stage-3 map = 100%,  reduce = 100%, Cumulative CPU 10.22 sec
+MapReduce Total cumulative CPU time: 10 seconds 220 msec
+Ended Job = job_1715251881039_0006
+MapReduce Jobs Launched: 
+Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 8.87 sec   HDFS Read: 12036 HDFS Write: 348 SUCCESS
+Stage-Stage-3: Map: 1  Reduce: 1   Cumulative CPU: 10.22 sec   HDFS Read: 5582 HDFS Write: 12 SUCCESS
+Total MapReduce CPU Time Spent: 19 seconds 90 msec
+OK
+106	15996.0
+Time taken: 156.662 seconds, Fetched: 1 row(s)
+
+
+Create table name CustomerInfo in hbase:-
+hbase(main):040:0> create 'CustomerInfo','customer'
+0 row(s) in 4.9360 seconds
+
+
+
+hive> create external table customerinfohbase(
+    > cust_id int, cust_name string, orderID int)
+    > stored by 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+    > with serdeproperties("hbase.columns.mapping" = ":key,customer:cust_name,customer:order_id")
+    > tblproperties("hbase.table.name" = "CustomerInfo");
+OK
+Time taken: 4.641 seconds
+hive> INSERT INTO TABLE customerinfohbase
+    > SELECT * FROM customer_info;
+Query ID = cloudera_20240509075656_75ce3350-811f-4c30-a98b-048e1dad2e33
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1715251881039_0007, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1715251881039_0007/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1715251881039_0007
+Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
+2024-05-09 07:56:35,223 Stage-0 map = 0%,  reduce = 0%
+2024-05-09 07:57:36,198 Stage-0 map = 0%,  reduce = 0%
+2024-05-09 07:57:45,626 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 6.12 sec
+MapReduce Total cumulative CPU time: 6 seconds 730 msec
+Ended Job = job_1715251881039_0007
+MapReduce Jobs Launched: 
+Stage-Stage-0: Map: 1   Cumulative CPU: 6.73 sec   HDFS Read: 11740 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 6 seconds 730 msec
+OK
+Time taken: 109.102 seconds
+
+
+Now list table in hbase and display the content:-
+
+hbase(main):041:0> list
+TABLE                                                                           
+CustomerInfo                                                                    
+flight                                                                          
+2 row(s) in 12.2120 seconds
+
+=> ["CustomerInfo", "flight"]
+hbase(main):042:0> scan 'CustomerInfo'
+ROW                   COLUMN+CELL                                               
+ 1                    column=customer:cust_name, timestamp=1715266665716, value=
+                      John Doe                                                  
+ 1                    column=customer:order_id, timestamp=1715266665716, value=1
+                      01                                                        
+ 10                   column=customer:cust_name, timestamp=1715266665716, value=
+                      Olivia Martinez                                           
+ 2                    column=customer:cust_name, timestamp=1715266665716, value=
+                      Jane Smith                                                
+ 2                    column=customer:order_id, timestamp=1715266665716, value=1
+                      02                                                        
+ 3                    column=customer:cust_name, timestamp=1715266665716, value=
+                      Michael Johnson                                           
+ 3                    column=customer:order_id, timestamp=1715266665716, value=1
+                      03                                                        
+ 4                    column=customer:cust_name, timestamp=1715266665716, value=
+                      Emily Brown                                               
+ 4                    column=customer:order_id, timestamp=1715266665716, value=1
+                      04                                                        
+ 5                    column=customer:cust_name, timestamp=1715266665716, value=
+                      Christopher Lee                                           
+ 5                    column=customer:order_id, timestamp=1715266665716, value=1
+                      05                                                        
+ 6                    column=customer:cust_name, timestamp=1715266665716, value=
+                      Sarah Wilson                                              
+ 6                    column=customer:order_id, timestamp=1715266665716, value=1
+                      06                                                        
+ 7                    column=customer:cust_name, timestamp=1715266665716, value=
+                      David Taylor                                              
+ 7                    column=customer:order_id, timestamp=1715266665716, value=1
+                      07                                                        
+ 8                    column=customer:cust_name, timestamp=1715266665716, value=
+                      Amanda Clark                                              
+ 8                    column=customer:order_id, timestamp=1715266665716, value=1
+                      08                                                        
+ 9                    column=customer:cust_name, timestamp=1715266665716, value=
+                      Matthew White                                             
+ 9                    column=customer:order_id, timestamp=1715266665716, value=1
+                      09                                                        
+10 row(s) in 1.9870 seconds
+
+
+**********************************Completed**************************************
+
