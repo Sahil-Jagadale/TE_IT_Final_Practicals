@@ -1,0 +1,874 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0425.1340                               -->
+<workbook original-version='18.1' source-build='2024.1.2 (20241.24.0425.1340)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='adult' inline='true' name='federated.0lhl19u07859zt12xpem71ys4ieq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='adult' name='textscan.0ep39e50tiwvkq170umio0isrkea'>
+            <connection class='textscan' directory='C:/Users/jagad/Downloads/DSBDAL_Sample DataSets/DSBDALExam DataSets/Adult' filename='adult.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0ep39e50tiwvkq170umio0isrkea' name='adult.csv' table='[adult#csv]' type='table'>
+          <columns character-set='UTF-8' header='no' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='F2' ordinal='1' />
+            <column datatype='integer' name='F3' ordinal='2' />
+            <column datatype='string' name='F4' ordinal='3' />
+            <column datatype='integer' name='F5' ordinal='4' />
+            <column datatype='string' name='F6' ordinal='5' />
+            <column datatype='string' name='F7' ordinal='6' />
+            <column datatype='string' name='F8' ordinal='7' />
+            <column datatype='string' name='F9' ordinal='8' />
+            <column datatype='string' name='F10' ordinal='9' />
+            <column datatype='integer' name='F11' ordinal='10' />
+            <column datatype='integer' name='F12' ordinal='11' />
+            <column datatype='integer' name='F13' ordinal='12' />
+            <column datatype='string' name='F14' ordinal='13' />
+            <column datatype='string' name='F15' ordinal='14' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0ep39e50tiwvkq170umio0isrkea' name='adult.csv' table='[adult#csv]' type='table'>
+          <columns character-set='UTF-8' header='no' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='F2' ordinal='1' />
+            <column datatype='integer' name='F3' ordinal='2' />
+            <column datatype='string' name='F4' ordinal='3' />
+            <column datatype='integer' name='F5' ordinal='4' />
+            <column datatype='string' name='F6' ordinal='5' />
+            <column datatype='string' name='F7' ordinal='6' />
+            <column datatype='string' name='F8' ordinal='7' />
+            <column datatype='string' name='F9' ordinal='8' />
+            <column datatype='string' name='F10' ordinal='9' />
+            <column datatype='integer' name='F11' ordinal='10' />
+            <column datatype='integer' name='F12' ordinal='11' />
+            <column datatype='integer' name='F13' ordinal='12' />
+            <column datatype='string' name='F14' ordinal='13' />
+            <column datatype='string' name='F15' ordinal='14' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;false&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F2]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F2</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F3]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F3</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F4]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F4</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F5</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F5]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F5</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F6</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F6]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F6</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F7</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F7]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F7</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F8</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F8]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F8</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F9</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F9]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F9</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F10</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F10]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F10</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F11</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F11]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F11</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F12</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F12]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F12</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F13</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F13]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F13</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F14</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F14]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F14</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F15</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F15]</local-name>
+            <parent-name>[adult.csv]</parent-name>
+            <remote-alias>F15</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Income' datatype='real' name='[Calculation_243475871075266562]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(FLOAT([F15]))' />
+      </column>
+      <column caption='IncomeCnt' datatype='integer' name='[Calculation_243475871080222728]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [F15] = &apos;&lt;=50K&apos; THEN 1&#13;&#10;ELSEIF [F15] = &apos;&gt;50K&apos; THEN 1&#13;&#10;END' />
+      </column>
+      <column caption='sexCalc' datatype='integer' name='[Calculation_243475871089078284]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [F10] = &apos;Male&apos; THEN 1&#13;&#10;ELSEIF [F10] = &apos;Female&apos; THEN 1&#13;&#10;END' />
+      </column>
+      <column caption='sex' datatype='string' name='[F10]' role='dimension' semantic-role='' type='nominal' />
+      <column caption='capital-gain' datatype='integer' name='[F11]' role='measure' type='quantitative' />
+      <column caption='capital-loss' datatype='integer' name='[F12]' role='measure' type='quantitative' />
+      <column caption='hours-per-week' datatype='integer' name='[F13]' role='measure' type='quantitative' />
+      <column caption='native-country' datatype='string' name='[F14]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column caption='target' datatype='string' name='[F15]' role='dimension' type='nominal' />
+      <column caption='age' datatype='integer' name='[F1]' role='measure' type='quantitative' />
+      <column caption='workclass' datatype='string' name='[F2]' role='dimension' type='nominal' />
+      <column caption='fnlwgt' datatype='integer' name='[F3]' role='measure' type='quantitative' />
+      <column caption='education' datatype='string' name='[F4]' role='dimension' type='nominal' />
+      <column caption='education-num' datatype='integer' name='[F5]' role='measure' type='quantitative' />
+      <column caption='marital-status' datatype='string' name='[F6]' role='dimension' type='nominal' />
+      <column caption='occupation' datatype='string' name='[F7]' role='dimension' type='nominal' />
+      <column caption='relationship' datatype='string' name='[F8]' role='dimension' type='nominal' />
+      <column caption='race' datatype='string' name='[F9]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='adult.csv' datatype='table' name='[__tableau_internal_object_id__].[adult.csv_AF62A25F5BC74AD0BD698035636DBE2D]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='F1' />
+        <field-sort-custom-order field='F2' />
+        <field-sort-custom-order field='F3' />
+        <field-sort-custom-order field='F4' />
+        <field-sort-custom-order field='F5' />
+        <field-sort-custom-order field='F6' />
+        <field-sort-custom-order field='F7' />
+        <field-sort-custom-order field='F8' />
+        <field-sort-custom-order field='F9' />
+        <field-sort-custom-order field='F10' />
+        <field-sort-custom-order field='F11' />
+        <field-sort-custom-order field='F12' />
+        <field-sort-custom-order field='F13' />
+        <field-sort-custom-order field='F14' />
+        <field-sort-custom-order field='F15' />
+        <field-sort-custom-order field='Calculation_243475871075266562' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='adult.csv' id='adult.csv_AF62A25F5BC74AD0BD698035636DBE2D'>
+            <properties context=''>
+              <relation connection='textscan.0ep39e50tiwvkq170umio0isrkea' name='adult.csv' table='[adult#csv]' type='table'>
+                <columns character-set='UTF-8' header='no' locale='en_IN' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='F2' ordinal='1' />
+                  <column datatype='integer' name='F3' ordinal='2' />
+                  <column datatype='string' name='F4' ordinal='3' />
+                  <column datatype='integer' name='F5' ordinal='4' />
+                  <column datatype='string' name='F6' ordinal='5' />
+                  <column datatype='string' name='F7' ordinal='6' />
+                  <column datatype='string' name='F8' ordinal='7' />
+                  <column datatype='string' name='F9' ordinal='8' />
+                  <column datatype='string' name='F10' ordinal='9' />
+                  <column datatype='integer' name='F11' ordinal='10' />
+                  <column datatype='integer' name='F12' ordinal='11' />
+                  <column datatype='integer' name='F13' ordinal='12' />
+                  <column datatype='string' name='F14' ordinal='13' />
+                  <column datatype='string' name='F15' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Find and Plot Income class of People whose education is master’s and doctorate. '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='adult' name='federated.0lhl19u07859zt12xpem71ys4ieq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lhl19u07859zt12xpem71ys4ieq'>
+            <column caption='IncomeCnt' datatype='integer' name='[Calculation_243475871080222728]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [F15] = &apos;&lt;=50K&apos; THEN 1&#13;&#10;ELSEIF [F15] = &apos;&gt;50K&apos; THEN 1&#13;&#10;END' />
+            </column>
+            <column caption='target' datatype='string' name='[F15]' role='dimension' type='nominal' />
+            <column caption='education' datatype='string' name='[F4]' role='dimension' type='nominal' />
+            <column-instance column='[F15]' derivation='None' name='[none:F15:nk]' pivot='key' type='nominal' />
+            <column-instance column='[F4]' derivation='None' name='[none:F4:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_243475871080222728]' derivation='Sum' name='[sum:Calculation_243475871080222728:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F4:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:F4:nk]' member='&quot;Doctorate&quot;' />
+              <groupfilter function='member' level='[none:F4:nk]' member='&quot;Masters&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F4:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0lhl19u07859zt12xpem71ys4ieq].[none:F15:nk] / [federated.0lhl19u07859zt12xpem71ys4ieq].[none:F4:nk])</rows>
+        <cols>[federated.0lhl19u07859zt12xpem71ys4ieq].[sum:Calculation_243475871080222728:qk]</cols>
+      </table>
+      <simple-id uuid='{9435D9DE-7D61-4561-93DC-548939B0CCB9}' />
+    </worksheet>
+    <worksheet name='Find and Plot Income class of people who have private jobs.'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='adult' name='federated.0lhl19u07859zt12xpem71ys4ieq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lhl19u07859zt12xpem71ys4ieq'>
+            <column caption='IncomeCnt' datatype='integer' name='[Calculation_243475871080222728]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [F15] = &apos;&lt;=50K&apos; THEN 1&#13;&#10;ELSEIF [F15] = &apos;&gt;50K&apos; THEN 1&#13;&#10;END' />
+            </column>
+            <column caption='target' datatype='string' name='[F15]' role='dimension' type='nominal' />
+            <column caption='workclass' datatype='string' name='[F2]' role='dimension' type='nominal' />
+            <column-instance column='[F15]' derivation='None' name='[none:F15:nk]' pivot='key' type='nominal' />
+            <column-instance column='[F2]' derivation='None' name='[none:F2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_243475871080222728]' derivation='Sum' name='[sum:Calculation_243475871080222728:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F2:nk]'>
+            <groupfilter function='member' level='[none:F2:nk]' member='&quot;Private&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F2:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F15:nk]</rows>
+        <cols>[federated.0lhl19u07859zt12xpem71ys4ieq].[sum:Calculation_243475871080222728:qk]</cols>
+      </table>
+      <simple-id uuid='{F5486E3A-55F1-4363-A130-D39688C5566F}' />
+    </worksheet>
+    <worksheet name='Find and Plot country wise statistics on Geospatial graph'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='adult' name='federated.0lhl19u07859zt12xpem71ys4ieq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lhl19u07859zt12xpem71ys4ieq'>
+            <column caption='IncomeCnt' datatype='integer' name='[Calculation_243475871080222728]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [F15] = &apos;&lt;=50K&apos; THEN 1&#13;&#10;ELSEIF [F15] = &apos;&gt;50K&apos; THEN 1&#13;&#10;END' />
+            </column>
+            <column caption='native-country' datatype='string' name='[F14]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='target' datatype='string' name='[F15]' role='dimension' type='nominal' />
+            <column-instance column='[F14]' derivation='None' name='[none:F14:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_243475871080222728]' derivation='Sum' name='[sum:Calculation_243475871080222728:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0lhl19u07859zt12xpem71ys4ieq].[Longitude (generated)]' included-values='non-null' />
+          <slices>
+            <column>[federated.0lhl19u07859zt12xpem71ys4ieq].[Longitude (generated)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F14:nk]' value='false' />
+            <format attr='break-on-special' field='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F14:nk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F14:nk]' value='false' />
+            <format attr='omit-on-special' field='[federated.0lhl19u07859zt12xpem71ys4ieq].[Latitude (generated)]' value='false' />
+            <format attr='break-on-special' field='[federated.0lhl19u07859zt12xpem71ys4ieq].[Latitude (generated)]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0lhl19u07859zt12xpem71ys4ieq].[Latitude (generated)]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F14:nk]' />
+              <color column='[federated.0lhl19u07859zt12xpem71ys4ieq].[sum:Calculation_243475871080222728:qk]' />
+              <geometry column='[federated.0lhl19u07859zt12xpem71ys4ieq].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.022099494934082' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lhl19u07859zt12xpem71ys4ieq].[Longitude (generated)]</rows>
+        <cols>[federated.0lhl19u07859zt12xpem71ys4ieq].[Latitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{B973CAF8-A92E-4962-9DD9-F6238FD6D1E7}' />
+    </worksheet>
+    <worksheet name='Find and Plot yearly sales comparison'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4841C463-9478-4045-8E45-1841DBEC1B8B}' />
+    </worksheet>
+    <worksheet name='Plot Countrywise male female ratio.'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='adult' name='federated.0lhl19u07859zt12xpem71ys4ieq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lhl19u07859zt12xpem71ys4ieq'>
+            <column caption='sexCalc' datatype='integer' name='[Calculation_243475871089078284]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [F10] = &apos;Male&apos; THEN 1&#13;&#10;ELSEIF [F10] = &apos;Female&apos; THEN 1&#13;&#10;END' />
+            </column>
+            <column caption='sex' datatype='string' name='[F10]' role='dimension' semantic-role='' type='nominal' />
+            <column caption='native-country' datatype='string' name='[F14]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column-instance column='[F10]' derivation='None' name='[none:F10:nk]' pivot='key' type='nominal' />
+            <column-instance column='[F14]' derivation='None' name='[none:F14:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_243475871089078284]' derivation='Sum' name='[sum:Calculation_243475871089078284:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F10:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:F10:nk]' />
+              <groupfilter function='member' level='[none:F10:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F14:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:F14:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:F14:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:F14:nk]' member='&quot;?&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F14:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0lhl19u07859zt12xpem71ys4ieq].[sum:Calculation_243475871089078284:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F10:nk]</column>
+            <column>[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F14:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.3293370008468628' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0lhl19u07859zt12xpem71ys4ieq].[none:F10:nk] * [federated.0lhl19u07859zt12xpem71ys4ieq].[sum:Calculation_243475871089078284:qk])</rows>
+        <cols>[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F14:nk]</cols>
+      </table>
+      <simple-id uuid='{1240C622-0674-405F-93B0-BB11D3867B26}' />
+    </worksheet>
+    <worksheet name='Plot Income class based on workclass(Government and other)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='adult' name='federated.0lhl19u07859zt12xpem71ys4ieq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lhl19u07859zt12xpem71ys4ieq'>
+            <column caption='IncomeCnt' datatype='integer' name='[Calculation_243475871080222728]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [F15] = &apos;&lt;=50K&apos; THEN 1&#13;&#10;ELSEIF [F15] = &apos;&gt;50K&apos; THEN 1&#13;&#10;END' />
+            </column>
+            <column caption='target' datatype='string' name='[F15]' role='dimension' type='nominal' />
+            <column caption='workclass' datatype='string' name='[F2]' role='dimension' type='nominal' />
+            <column-instance column='[F15]' derivation='None' name='[none:F15:nk]' pivot='key' type='nominal' />
+            <column-instance column='[F2]' derivation='None' name='[none:F2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_243475871080222728]' derivation='Sum' name='[sum:Calculation_243475871080222728:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F2:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:F2:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:F2:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:F2:nk]' member='&quot;?&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F2:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0lhl19u07859zt12xpem71ys4ieq].[sum:Calculation_243475871080222728:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F2:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F2:nk]</rows>
+        <cols>([federated.0lhl19u07859zt12xpem71ys4ieq].[none:F15:nk] * [federated.0lhl19u07859zt12xpem71ys4ieq].[sum:Calculation_243475871080222728:qk])</cols>
+      </table>
+      <simple-id uuid='{C5C9C1B6-8E77-4625-A80E-0CF19983589E}' />
+    </worksheet>
+    <worksheet name='Plot agewise- education vs salary statistics.'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='adult' name='federated.0lhl19u07859zt12xpem71ys4ieq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lhl19u07859zt12xpem71ys4ieq'>
+            <column caption='IncomeCnt' datatype='integer' name='[Calculation_243475871080222728]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [F15] = &apos;&lt;=50K&apos; THEN 1&#13;&#10;ELSEIF [F15] = &apos;&gt;50K&apos; THEN 1&#13;&#10;END' />
+            </column>
+            <column caption='target' datatype='string' name='[F15]' role='dimension' type='nominal' />
+            <column caption='age' datatype='integer' name='[F1]' role='measure' type='quantitative' />
+            <column caption='education' datatype='string' name='[F4]' role='dimension' type='nominal' />
+            <column-instance column='[F1]' derivation='None' name='[none:F1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[F4]' derivation='None' name='[none:F4:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_243475871080222728]' derivation='Sum' name='[sum:Calculation_243475871080222728:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F1:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lhl19u07859zt12xpem71ys4ieq].[sum:Calculation_243475871080222728:qk]</rows>
+        <cols>[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F4:nk]</cols>
+      </table>
+      <simple-id uuid='{0158FB77-40BE-4675-897B-E2AF5129AB31}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Find and Plot Income class of People whose education is master’s and doctorate. '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F58870D9-CF4B-4C03-9AAE-3E840F247442}' />
+    </window>
+    <window class='worksheet' name='Find and Plot Income class of people who have private jobs.'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DDA0C08E-E4A3-414E-84FB-151B02965F55}' />
+    </window>
+    <window class='worksheet' name='Find and Plot yearly sales comparison'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{56532CDA-4E78-4E38-9878-90A8294DB131}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Find and Plot country wise statistics on Geospatial graph'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card pane-specification-id='0' param='[federated.0lhl19u07859zt12xpem71ys4ieq].[sum:Calculation_243475871080222728:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1A254D19-2CED-49B6-8273-492691DEA421}' />
+    </window>
+    <window class='worksheet' name='Plot agewise- education vs salary statistics.'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0lhl19u07859zt12xpem71ys4ieq].[none:F1:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7F8768F8-878B-42BC-AFD4-75BE095586F8}' />
+    </window>
+    <window class='worksheet' name='Plot Countrywise male female ratio.'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C6652531-876D-4DA8-B52E-CD901EA39CFE}' />
+    </window>
+    <window class='worksheet' name='Plot Income class based on workclass(Government and other)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B30DA345-D49C-48AB-9A84-1A548150E727}' />
+    </window>
+  </windows>
+</workbook>
